@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +8,29 @@
 </head>
 
 <body>
-    <!-- total in hand amount -->
-    <div class="total-amt-class">
-        <h3 id="totalAmnt">Total Amount</h3>
-        <input
-            type="number" 
-            id="total-amount" 
-            placeholder="Enter Total Amount" />
-        <button class="submit" id="total-amount-button">Set Total Amount</button>
+    <div class="main-container">
+        <form action="#" onsubmit="savetolocalstorage(event)">
+            <label for="expense_amount">choose expenseamount:</label>
+            <select id="amount" name="amount_value">
+                <option value="" name="">choose amount</option>
+                <option value="100">100</option>
+                <option value="150">150</option>
+                <option value="200">200</option>
+            </select>
+            <label for="choose_description">Choose Description:</label>
+            <select id="description" name="description">
+                <option value="" name="">choose description</option>
+                <option value="vacation">vacation</option>
+                <option value="fuel">fuel</option>
+                <option value="movie">movie</option>
+            </select>
+            <button type="button" id="add_expense">Add expense</button>
+        </form>
+        <ul id="list_of_expense">
+
+        </ul>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
